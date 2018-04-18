@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm">
+						<input id="org_id" name="org_id" th:value="${org.org_id}"  type="hidden">
+							<div class="form-group">	
+								<label class="col-sm-3 control-label">所属用户ID：</label>
+								<div class="col-sm-8">
+									<input id="userId" name="userId" th:value="${org.userId}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">组织名称：</label>
+								<div class="col-sm-8">
+									<input id="orgname" name="orgname" th:value="${org.orgname}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">短名称：</label>
+								<div class="col-sm-8">
+									<input id="shortname" name="shortname" th:value="${org.shortname}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">组织所属用户名：</label>
+								<div class="col-sm-8">
+									<input id="username" name="username" th:value="${org.username}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">联系电话：</label>
+								<div class="col-sm-8">
+									<input id="phone" name="phone" th:value="${org.phone}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">类型（企业、个人）：</label>
+								<div class="col-sm-8">
+									<input id="type" name="type" th:value="${org.type}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">状态 0:禁用，1:正常：</label>
+								<div class="col-sm-8">
+									<input id="status" name="status" th:value="${org.status}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">创建用户id：</label>
+								<div class="col-sm-8">
+									<input id="userIdCreate" name="userIdCreate" th:value="${org.userIdCreate}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">创建时间：</label>
+								<div class="col-sm-8">
+									<input id="gmtCreate" name="gmtCreate" th:value="${org.gmtCreate}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">修改时间：</label>
+								<div class="col-sm-8">
+									<input id="gmtModified" name="gmtModified" th:value="${org.gmtModified}" class="form-control" type="text">
+								</div>
+							</div>
+																					<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+									<button type="submit" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/js/appjs/sys/org/edit.js">
+	</script>
+</body>
+</html>
